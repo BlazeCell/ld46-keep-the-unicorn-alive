@@ -34,6 +34,19 @@ MonoBehaviour:
   target: {x: 0, y: 0, z: 0}
   size: 1
   speed: 1
+--- !u!114 &4188886208981224916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935055983160128724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10ea97dd4f4ffe346be8bd2b5d6ee374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1001 &3126829864832472414
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,16 +22,21 @@ public class Bush : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        //inside = true;
-        if (trap == true)
-        {
-            unicorn.GetComponent<Health>().health = unicorn.GetComponent<Health>().health - 3;
-            Debug.Log("There was a trap!");
-        }
-        else
-        {
-            Debug.Log("There was no trap.");
-        }
+		if (other.tag.Equals("Unicorn"))
+		{
+			var unicornHealth = other.GetComponent<Health>();
+
+			//inside = true;
+			if (trap)
+			{
+				unicornHealth.health = unicornHealth.health - 3;
+				Debug.Log("There was a trap!");
+			}
+			else
+			{
+				Debug.Log("There was no trap.");
+			}
+		}
     }
 
 
