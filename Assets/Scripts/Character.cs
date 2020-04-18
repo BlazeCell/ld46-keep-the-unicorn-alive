@@ -22,5 +22,6 @@ public class Character : MonoBehaviour
 
 		_walking = Vector2.Distance(transform.position, target) > 0.1f;
 		_animator.SetBool("Walking", _walking);
+		_animator.speed = speed;
     }
 }
