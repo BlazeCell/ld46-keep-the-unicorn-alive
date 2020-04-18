@@ -6,6 +6,7 @@ TagManager:
   tags:
   - UnicornGoal
   - Unicorn
+  - Fox
   layers:
   - Default
   - TransparentFX
