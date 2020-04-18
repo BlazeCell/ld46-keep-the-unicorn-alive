@@ -19,7 +19,7 @@ public class Bush : MonoBehaviour
         
     }
     
-    void OnTriggerEnter(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (trap == true)
         {
