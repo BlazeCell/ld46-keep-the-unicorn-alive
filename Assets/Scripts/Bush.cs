@@ -44,6 +44,16 @@ public class Bush : MonoBehaviour
 				Debug.Log("There was no trap.");
 			}
 		}
+
+        if (other.tag.Equals("Player"))
+        {
+            if (trap)
+            {
+                trap = false;
+                Debug.Log("Trap disarmed. That was close!");
+            }
+
+        }
     }
 
 
