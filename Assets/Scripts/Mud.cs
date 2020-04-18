@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bush : MonoBehaviour
+public class Mud : MonoBehaviour
 {
-	public bool trap;
+	public bool inside;
 	
 
     // Start is called before the first frame update
@@ -21,14 +21,15 @@ public class Bush : MonoBehaviour
     
     void OnTriggerEnter(Collider2D other)
     {
-        if (trap == true)
-        {
-            Debug.Log("There was a trap!");
-        }
-        else
-        {
-            Debug.Log("There was no trap.");
-        }
+        inside = true;
+        Debug.Log("Currently in mud");
+        
+    }
+    void OnTriggerExit(Collider2D other)
+    {
+        inside = false;
+        Debug.Log("Currently out of mud");
+
     }
 
 }
