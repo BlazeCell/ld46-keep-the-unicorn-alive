@@ -15,8 +15,17 @@ public class CharacterMouseMove : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
 		{
-			var mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			mouseWorld.z = 0.0f;
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			Plane plane = new Plane(Vector3.back, Vector3.zero);
+			float dist;
+			plane.Raycast(ray, out dist);
+
+			//var mousePos = Input.mousePosition;
+			//mousePos.z = 0.0f;
+			//var mouseWorld = Camera.main.ScreenToWorldPoint(mousePos);
+			var mouseWorld = ray.GetPoint(dist);
+			
+			Debug.Log(mouseWorld);
 			_character.target = mouseWorld;
 		}
     }
