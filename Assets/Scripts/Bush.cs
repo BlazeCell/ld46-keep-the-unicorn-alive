@@ -54,6 +54,12 @@ public class Bush : MonoBehaviour
             }
 
         }
+
+        if (other.tag.Equals("Fox"))
+        {
+            trap = true;
+            Debug.Log("The fox has armed a trap!");
+        }
     }
 
 
