@@ -7,10 +7,17 @@ public class Bush : MonoBehaviour
 	public bool trap;
     //public bool inside;
     public GameObject unicorn;
+    public float isItTrapped;
+    public float chanceOfTrap;
 
     // Start is called before the first frame update
     void Start()
     {
+        isItTrapped = Random.Range(0, 100);
+        if (isItTrapped > chanceOfTrap)
+        {
+            trap = true;
+        }
         //unicorn = GameObject.Find("Unicorn");
     }
 

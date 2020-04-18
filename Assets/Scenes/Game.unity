@@ -207,10 +207,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261528792}
     m_Modifications:
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
       propertyPath: unicorn
       value: 
       objectReference: {fileID: 1969600020}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: chanceOfTrap
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: trap
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2233821358741470133, guid: 420440074224f1c46b47fcd77209cfb9,
         type: 3}
       propertyPath: m_Name
@@ -610,10 +630,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261528792}
     m_Modifications:
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
       propertyPath: unicorn
       value: 
       objectReference: {fileID: 1969600020}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: chanceOfTrap
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: trap
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2233821358741470133, guid: 420440074224f1c46b47fcd77209cfb9,
         type: 3}
       propertyPath: m_Name
@@ -704,9 +744,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 627084917}
+  - {fileID: 646161155}
   - {fileID: 434112685}
   - {fileID: 194083258}
-  - {fileID: 646161155}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -717,10 +757,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261528792}
     m_Modifications:
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
       propertyPath: unicorn
       value: 
       objectReference: {fileID: 1969600020}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: chanceOfTrap
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: trap
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2233821358741470133, guid: 420440074224f1c46b47fcd77209cfb9,
         type: 3}
       propertyPath: m_Name
@@ -960,10 +1020,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1261528792}
     m_Modifications:
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Center.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084918, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: m_Size.x
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
       propertyPath: unicorn
       value: 
       objectReference: {fileID: 1969600020}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: chanceOfTrap
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: trap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627084919, guid: 420440074224f1c46b47fcd77209cfb9, type: 3}
+      propertyPath: isItTrapped
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2233821358741470133, guid: 420440074224f1c46b47fcd77209cfb9,
         type: 3}
       propertyPath: m_Name
