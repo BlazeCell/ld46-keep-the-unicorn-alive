@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &627084918
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233821358741470133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2, y: 1.55, z: 1}
+  m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &627084919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233821358741470133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388c3c06c9a4d4548a27dd622a308af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trap: 1
+  unicorn: {fileID: 0}
 --- !u!1001 &4079531138027608639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,12 +53,12 @@ PrefabInstance:
     - target: {fileID: 2854516098071585160, guid: 4e1c85547f4f8a7438d43d48746a602e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: 2854516098071585160, guid: 4e1c85547f4f8a7438d43d48746a602e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.15
       objectReference: {fileID: 0}
     - target: {fileID: 2854516098071585160, guid: 4e1c85547f4f8a7438d43d48746a602e,
         type: 3}
@@ -83,5 +110,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop - Bush
       objectReference: {fileID: 0}
+    - target: {fileID: 2854516098071585162, guid: 4e1c85547f4f8a7438d43d48746a602e,
+        type: 3}
+      propertyPath: m_TagString
+      value: UnicornGoal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e1c85547f4f8a7438d43d48746a602e, type: 3}
+--- !u!1 &2233821358741470133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2854516098071585162, guid: 4e1c85547f4f8a7438d43d48746a602e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4079531138027608639}
+  m_PrefabAsset: {fileID: 0}

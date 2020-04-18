@@ -5,8 +5,9 @@ using UnityEngine;
 public class CharacterMouseMove : MonoBehaviour
 {
 	private Character _character;
+	private Plane _plane = new Plane(Vector3.back, Vector3.zero);
 
-    void Start()
+	void Start()
     {
 		_character = GetComponent<Character>();
     }
@@ -16,16 +17,12 @@ public class CharacterMouseMove : MonoBehaviour
         if (Input.GetMouseButton(0))
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			Plane plane = new Plane(Vector3.back, Vector3.zero);
-			float dist;
-			plane.Raycast(ray, out dist);
 
-			//var mousePos = Input.mousePosition;
-			//mousePos.z = 0.0f;
-			//var mouseWorld = Camera.main.ScreenToWorldPoint(mousePos);
+			float dist;
+			_plane.Raycast(ray, out dist);
+
 			var mouseWorld = ray.GetPoint(dist);
 			
-			Debug.Log(mouseWorld);
 			_character.target = mouseWorld;
 		}
     }
