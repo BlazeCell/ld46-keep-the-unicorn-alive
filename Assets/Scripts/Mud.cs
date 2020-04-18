@@ -19,13 +19,13 @@ public class Mud : MonoBehaviour
         
     }
     
-    void OnTriggerEnter(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         inside = true;
         Debug.Log("Currently in mud");
         
     }
-    void OnTriggerExit(Collider2D other)
+    void OnTriggerExit(Collider other)
     {
         inside = false;
         Debug.Log("Currently out of mud");
