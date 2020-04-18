@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bush : MonoBehaviour
 {
 	public bool trap;
+    //public bool inside;
 	
 
     // Start is called before the first frame update
@@ -16,11 +17,12 @@ public class Bush : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log("It's working");
     }
     
     void OnTriggerEnter(Collider other)
     {
+        //inside = true;
         if (trap == true)
         {
             Debug.Log("There was a trap!");
@@ -30,5 +32,6 @@ public class Bush : MonoBehaviour
             Debug.Log("There was no trap.");
         }
     }
+
 
 }
