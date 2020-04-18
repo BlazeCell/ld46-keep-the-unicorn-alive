@@ -42,14 +42,15 @@ public class UnicornWalkTo : MonoBehaviour
     {                   //Goal: Once the unicorn has reached its target, take an object from the unicornGoals array and select one to become the new target
         if (unicorn.transform.position == unicornCurrentGoal.transform.position)
         {
-            targetNumber = targetNumber + 1;
+            targetNumber = Random.Range(0, unicornGoals.Length);
         }
-        
+        /*
         if (targetNumber >= unicornGoals.Length)
         {
             targetNumber = 0;
         }
-
+        */
+        
         //Debug.Log(targetNumber);
     }
 }
