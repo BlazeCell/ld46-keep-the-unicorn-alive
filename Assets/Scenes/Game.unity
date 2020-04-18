@@ -269,6 +269,41 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1225903567}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &868117836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1396007900009843212, guid: 3e3861e54c37b7c4db4eb88a600dad9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2280617736590882679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &868117837
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868117836}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &868117838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868117836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1225903567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +858,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2704280114606043916, guid: 3e3861e54c37b7c4db4eb88a600dad9b,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e3861e54c37b7c4db4eb88a600dad9b, type: 3}
 --- !u!1001 &6801516586815849997
@@ -901,6 +941,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4936961375074285092, guid: d36d003cb3dbca84ea847379ec9325cd,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8240331198877355812, guid: d36d003cb3dbca84ea847379ec9325cd,
         type: 3}
       propertyPath: m_Name
