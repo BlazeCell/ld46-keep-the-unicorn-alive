@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - UnicornGoal
+  - Unicorn
   layers:
   - Default
   - TransparentFX
