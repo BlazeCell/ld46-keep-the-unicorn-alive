@@ -9,6 +9,9 @@ public class Bush : MonoBehaviour
     public GameObject unicorn;
     public float isItTrapped;
     public float chanceOfTrap;
+    public AudioSource trapSprung;
+    public AudioSource trapDisarmed;
+    public AudioSource trapSet;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +40,14 @@ public class Bush : MonoBehaviour
 			if (trap)
 			{
 				unicornHealth.health = unicornHealth.health - 3;
-				Debug.Log("There was a trap!");
-			}
+                trapSprung.Play();
+                other.GetComponent<Character>()._inPain = true;
+                
+                //Debug.Log("There was a trap!");
+            }
 			else
 			{
-				Debug.Log("There was no trap.");
+				//Debug.Log("There was no trap.");
 			}
 		}
 
@@ -50,7 +56,8 @@ public class Bush : MonoBehaviour
             if (trap)
             {
                 trap = false;
-                Debug.Log("Trap disarmed. That was close!");
+                trapDisarmed.Play();
+                //Debug.Log("Trap disarmed. That was close!");
             }
 
         }
@@ -58,7 +65,8 @@ public class Bush : MonoBehaviour
         if (other.tag.Equals("Fox"))
         {
             trap = true;
-            Debug.Log("The fox has armed a trap!");
+            trapSet.Play();
+            //Debug.Log("The fox has armed a trap!");
         }
     }
 

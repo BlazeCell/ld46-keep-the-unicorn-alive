@@ -12,6 +12,7 @@ public class Character : MonoBehaviour
 	private Animator _animator;
 	private SpriteRenderer _spriteRenderer;
 	private bool _walking = false;
+	public bool _inPain = false;
 	
     void Start()
     {
@@ -25,6 +26,7 @@ public class Character : MonoBehaviour
 
 		_walking = Vector2.Distance(transform.position, target) > 0.1f;
 		_animator.SetBool("Walking", _walking);
+		
 		_animator.speed = speedAnim;
 
 		// This verbose if allows us to not change the flip if the x values are equal.
@@ -34,5 +36,14 @@ public class Character : MonoBehaviour
 		if (target.x < transform.position.x)
 			_spriteRenderer.flipX = false;
 
+		if (_inPain == true)	//Play pain animation
+		{
+			GetComponent<Animator>().SetBool("InPain", true);
+			_inPain = false;
+		}
+		else
+		{
+			GetComponent<Animator>().SetBool("InPain", false);
+		}
 	}
 }
