@@ -12,6 +12,8 @@ public class Bush : MonoBehaviour
     public AudioSource trapSprung;
     public AudioSource trapDisarmed;
     public AudioSource trapSet;
+    public GameObject trapSprite;
+    public GameObject trapSprungSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -42,13 +44,11 @@ public class Bush : MonoBehaviour
 				unicornHealth.health = unicornHealth.health - 3;
                 trapSprung.Play();
                 other.GetComponent<Character>()._inPain = true;
-                
+                trapSprungSprite.GetComponent<SpriteRenderer>().enabled = true;
+                trapSprite.GetComponent<SpriteRenderer>().enabled = false;
+                trap = false;
                 //Debug.Log("There was a trap!");
             }
-			else
-			{
-				//Debug.Log("There was no trap.");
-			}
 		}
 
         if (other.tag.Equals("Player"))
@@ -57,15 +57,20 @@ public class Bush : MonoBehaviour
             {
                 trap = false;
                 trapDisarmed.Play();
+                trapSprite.GetComponent<SpriteRenderer>().enabled = false;
+                trapSprungSprite.GetComponent<SpriteRenderer>().enabled = false;
                 //Debug.Log("Trap disarmed. That was close!");
             }
 
         }
 
-        if (other.tag.Equals("Fox"))
+        if (other.tag.Equals("Hunter"))
         {
             trap = true;
+            trapSet.pitch = Random.Range(0.8f, 1.2f);
             trapSet.Play();
+            trapSprungSprite.GetComponent<SpriteRenderer>().enabled = false;
+            trapSprite.GetComponent<SpriteRenderer>().enabled = true;
             //Debug.Log("The fox has armed a trap!");
         }
     }

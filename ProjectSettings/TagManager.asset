@@ -7,6 +7,7 @@ TagManager:
   - UnicornGoal
   - Unicorn
   - Fox
+  - Hunter
   layers:
   - Default
   - TransparentFX

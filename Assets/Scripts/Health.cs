@@ -17,9 +17,9 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             //Debug.Log("Unicorn ded :(");
-            this.GetComponent<Character>().speedAnim = 0;
+            //this.GetComponent<Character>().speedAnim = 0;
             this.GetComponent<Character>().speedMove = 0;
-            
+            this.GetComponent<Animator>().SetBool("Dead", true);
 
         }
     }
