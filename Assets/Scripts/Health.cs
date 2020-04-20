@@ -5,6 +5,9 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float health;
+    public GameObject scoreCounter;
+    public GameObject aliveSprite;
+    public GameObject deadSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,9 @@ public class Health : MonoBehaviour
             //this.GetComponent<Character>().speedAnim = 0;
             this.GetComponent<Character>().speedMove = 0;
             this.GetComponent<Animator>().SetBool("Dead", true);
-
+            scoreCounter.GetComponent<Score>().enabled = false;
+            aliveSprite.GetComponent<SpriteRenderer>().enabled = false;
+            deadSprite.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

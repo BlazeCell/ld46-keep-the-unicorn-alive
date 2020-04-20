@@ -8,10 +8,12 @@ public class HuntMouse : MonoBehaviour
     public GameObject foxHole;
     public bool hunting;
     public bool caught;
+    private float speedMove;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        //GetComponent<Character>().speedMove = speedMove;
     }
 
 
@@ -33,7 +35,7 @@ public class HuntMouse : MonoBehaviour
             hunting = false;
             caught = false;
             GetComponent<BoxCollider>().enabled = false;
-            GetComponent<Character>().speedMove = 4;
+            speedMove = 4;
             GetComponent<Character>().speedAnim = 4;
             GetComponent<Character>().target.x = foxHole.transform.position.x;
             GetComponent<Character>().target.y = foxHole.transform.position.y;

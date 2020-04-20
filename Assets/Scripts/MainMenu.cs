@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayGameEasy()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Easy");
+    }
+    public void PlayGameMedium()
+    {
+        SceneManager.LoadScene("Survival");
+    }
+    public void PlayGameHard()
+    {
+        SceneManager.LoadScene("Hard");
     }
 }

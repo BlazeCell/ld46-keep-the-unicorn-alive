@@ -12,12 +12,15 @@ public class Bush : MonoBehaviour
     public AudioSource trapSprung;
     public AudioSource trapDisarmed;
     public AudioSource trapSet;
+    public AudioSource grassEat;
     public GameObject trapSprite;
     public GameObject trapSprungSprite;
+    public GameObject scoreCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        scoreCounter = GameObject.Find("ScoreCounter");
         isItTrapped = Random.Range(0, 100);
         if (isItTrapped > chanceOfTrap)
         {
@@ -38,16 +41,23 @@ public class Bush : MonoBehaviour
 		{
 			var unicornHealth = other.GetComponent<Health>();
 
-			//inside = true;
-			if (trap)
-			{
-				unicornHealth.health = unicornHealth.health - 3;
+            //inside = true;
+            if (trap)
+            {
+                unicornHealth.health = unicornHealth.health - 3;
                 trapSprung.Play();
                 other.GetComponent<Character>()._inPain = true;
                 trapSprungSprite.GetComponent<SpriteRenderer>().enabled = true;
                 trapSprite.GetComponent<SpriteRenderer>().enabled = false;
                 trap = false;
+                
                 //Debug.Log("There was a trap!");
+            }
+            else
+            {
+                scoreCounter.GetComponent<Score>().score = scoreCounter.GetComponent<Score>().score + 1;
+                grassEat.pitch = Random.Range(0.8f, 1.2f);
+                grassEat.Play();
             }
 		}
 
@@ -61,7 +71,7 @@ public class Bush : MonoBehaviour
                 trapSprungSprite.GetComponent<SpriteRenderer>().enabled = false;
                 //Debug.Log("Trap disarmed. That was close!");
             }
-
+            trapSprungSprite.GetComponent<SpriteRenderer>().enabled = false;
         }
 
         if (other.tag.Equals("Hunter"))

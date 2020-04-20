@@ -44,12 +44,12 @@ public class Character : MonoBehaviour
 
 		if (_inPain == true)    //Play pain animation
 		{
-			GetComponent<Animator>().SetBool("InPain", true);
+			_animator.SetBool("InPain", true);
 			_inPain = false;
 		}
 		else
 		{
-			GetComponent<Animator>().SetBool("InPain", false);
+			_animator.SetBool("InPain", false);
 		}
 
 		if (caught == true)
