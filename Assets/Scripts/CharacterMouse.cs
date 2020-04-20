@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class CharacterMouse : MonoBehaviour
 {
 	public Vector3 target;
 	public float size = 1.0f;
@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
 	public float speedAnim = 1.0f;
 	private float caughtSpeed;
 	private float notCaughtSpeed;
-
+	
 
 	private Animator _animator;
 	private SpriteRenderer _spriteRenderer;
@@ -27,7 +27,7 @@ public class Character : MonoBehaviour
 	}
 
 	void Update()
-    {
+	{
 		transform.position = Vector3.MoveTowards(transform.position, target, speedMove * Time.deltaTime);
 
 		_walking = Vector2.Distance(transform.position, target) > 0.1f;
@@ -60,5 +60,7 @@ public class Character : MonoBehaviour
 		{
 			speedMove = notCaughtSpeed;
 		}
+
 	}
 }
+

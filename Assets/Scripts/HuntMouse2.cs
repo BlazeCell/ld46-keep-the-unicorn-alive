@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HuntMouse : MonoBehaviour
+public class HuntMouse2 : MonoBehaviour
 {
     public GameObject player;
     public GameObject foxHole;
@@ -11,7 +11,7 @@ public class HuntMouse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
 
@@ -47,11 +47,11 @@ public class HuntMouse : MonoBehaviour
 
         if (caught == true)
         {
-            player.GetComponent<Caught>().caught = true;
+            player.GetComponent<CharacterMouse>().caught = true;
         }
         else
         {
-            player.GetComponent<Caught>().caught = false;
+            player.GetComponent<CharacterMouse>().caught = false;
         }
 
     }
